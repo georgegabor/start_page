@@ -1,0 +1,46 @@
+<!-- <app-main-nav></app-main-nav> -->
+<mat-toolbar>
+  <mat-toolbar-row class="container">
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <img src="../assets/Horizontal/01_Raiffeisen Bank (Horizontal) RBI yellow.png" />
+
+    <div class="center">
+      <button mat-button routerLink="/home" routerLinkActive="active" matTooltip="Go Home">
+        <mat-icon class="home-icon">home</mat-icon>
+      </button>
+    </div>
+    <span class="toolbar-spacer"></span>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <a mat-menu-item routerLink="/home/preferences" routerLinkActive="active"
+        ><mat-icon>build</mat-icon>Preferences</a
+      >
+      <a mat-menu-item routerLink="/home/about" routerLinkActive="active"><mat-icon>info</mat-icon>About</a>
+      <a mat-menu-item routerLink="/home/changepassword" routerLinkActive="active"
+        ><mat-icon>lock</mat-icon>Change Password</a
+      >
+      <a mat-menu-item><mat-icon>logout</mat-icon>Logout</a>
+    </mat-menu>
+    <h1>Username</h1>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="tab-row">
+    <app-breadcrumb></app-breadcrumb>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav mode="over" [opened]="(panelIndex$ | async) !== -1" role="navigation" #sidenav class="sidenav-container">
+    <mat-nav-list>
+      <app-expansion></app-expansion>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

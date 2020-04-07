@@ -1,0 +1,19 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* @import '@angular/material/prebuilt-themes/indigo-pink.css'; */
+/* @import '@angular/material/prebuilt-themes/pink-bluegrey.css'; */
+/* @import '@angular/material/prebuilt-themes/purple-green.css'; */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: rgb(233, 229, 222);
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}

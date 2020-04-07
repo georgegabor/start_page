@@ -1,0 +1,23 @@
+<div class="grid-container">
+  <!-- <h1 class="mat-h1">Dashboard</h1> -->
+  <mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let card of cards | async; let i = index" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="card">
+        <mat-card-header class="card-header">
+          <mat-card-title>
+            <div>
+              {{ card.title }}
+            </div>
+          </mat-card-title>
+        </mat-card-header>
+
+        <hr />
+        <mat-card-content class="card-content">
+          <div class="icon" (click)="iconClicked(i)">
+            <mat-icon [inline]="true"> {{ card.icon }}</mat-icon>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

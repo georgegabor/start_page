@@ -1,0 +1,59 @@
+<mat-accordion displayMode="default">
+  <mat-expansion-panel [expanded]="(panelIndex$ | async) === 0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Dimension management
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>Parameter tables update</p>
+    <a mat-list-item routerLink="/company/list" routerLinkActive="active">Data Edits</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">File mapping</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">File upload</a>
+    <p>Maintain of hierarchies and filters</p>
+    <a mat-list-item routerLink="/company/list" routerLinkActive="active">Members</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">Hierarchies</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">Filters</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">Expressions</a>
+    <p>Rate management</p>
+    <a mat-list-item routerLink="/company/list" routerLinkActive="active">Interest Rates</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">Currencies</a>
+    <a mat-list-item routerLink="/company/form" routerLinkActive="active">Currency Rates</a>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="(panelIndex$ | async) === 1">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        FTP Engine Specification
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <a mat-list-item routerLink="/account/list" routerLinkActive="active">3.1 - FTP engine preferences</a>
+    <p>3.2 - FTP Patterns</p>
+    <a mat-list-item routerLink="/account/list" routerLinkActive="active">3.2.1 - Payment Patterns</a>
+    <a mat-list-item routerLink="/account/form" routerLinkActive="active">3.2.2 - Repricing Patters</a>
+    <a class="p" mat-list-item routerLink="/account/form" routerLinkActive="active">3.3 - FTP Rules</a>
+    <a class="p" mat-list-item routerLink="/account/form" routerLinkActive="active">3.4 - FTP Processing</a>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="(panelIndex$ | async) === 2">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Allocation Engine Specification
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <a mat-list-item routerLink="/partner/list" routerLinkActive="active">Allocation Specification</a>
+    <a mat-list-item routerLink="/partner/form" routerLinkActive="active">Allocation Model</a>
+    <a mat-list-item routerLink="/partner/form" routerLinkActive="active">Static Table Driver</a>
+    <a mat-list-item routerLink="/partner/form" routerLinkActive="active">Lookup Table Driver</a>
+    <a mat-list-item routerLink="/partner/form" routerLinkActive="active">Allocation History</a>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="(panelIndex$ | async) === 3">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        User Management
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <a mat-list-item routerLink="/project/list" routerLinkActive="active">Register</a>
+    <a mat-list-item routerLink="/project/form" routerLinkActive="active">Add New</a>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,35 @@
+.icon {
+  font-size: 5vw;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.grid-container {
+  margin: 2em;
+}
+
+.card {
+  /* position: absolute;
+  top: 5vw;
+  left: 2.5vw;
+  right: 2.5vw;
+  bottom: 3vw; */
+  margin: 1vw;
+  width: 85%;
+  box-shadow: 0 12px 12px #817b7b;
+  background-color: #004454;
+  color: rgb(233, 229, 222);
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+}

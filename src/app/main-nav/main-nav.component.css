@@ -1,0 +1,48 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.container {
+  /* Style */
+  /* height: 64px; */
+  /* line-height: 64px; */
+  /* background: teal; */
+  /* color: white; */
+  /* font-family: Helvetica; */
+  /* padding: 12px; */
+  /* box-sizing: border-box; */
+  /* Actual logic */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.container div:last-child {
+  text-align: right;
+}
+
+.container div {
+  flex: 1 1 auto;
+}
+
+.home {
+  vertical-align: middle;
+}
+
+#home-span {
+  padding: 0.5em;
+}

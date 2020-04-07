@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dimension management</a>
+      <a mat-list-item routerLink="/table" routerLinkActive="active">FTP Engine Specification</a>
+      <a mat-list-item routerLink="/dragdrop" routerLinkActive="active">Allocation Engine Specification</a>
+      <a mat-list-item routerLink="/addressform" routerLinkActive="active">User Management</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="container">
+      <div>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>nav-and-table</span>
+      </div>
+      <div class="home">
+        <button type="button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+          <mat-icon>home</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item>Preferences</button>
+          <button mat-menu-item>Version</button>
+          <button mat-menu-item>Change Password</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+        <span id="home-span">Username</span>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
